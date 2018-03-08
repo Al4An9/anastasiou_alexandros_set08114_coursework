@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="uk.ac.napier.ultimatefitnesstool.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/FifthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_green_light"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:text="@string/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="15dp"
+            android:layout_marginRight="27dp"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="64dp"/>
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:hint="someone@email.com"
+            android:ems="10"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SixththLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_green_light"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:text="@string/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="15dp"
+            android:layout_marginRight="32dp"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="64dp"/>
+
+        <EditText
+            android:id="@+id/editTextPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:ems="10"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/FirstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_green_light"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/textView"
+            android:text="@string/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="64dp" />
+
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:hint="cm"
+            android:ems="10"
+            android:textSize="20sp"
+            android:inputType="number|numberDecimal"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SecondLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_orange_light"
+        android:weightSum="2">
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:text="@string/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="64dp" />
+
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:hint="kg"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:inputType="number|numberDecimal"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ThirdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_orange_light"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:text="@string/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:layout_marginRight="48dp"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="152dp" />
+
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:inputType="number|numberDecimal"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/FourthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_green_light"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:text="@string/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:layout_marginRight="48dp"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="152dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioButton"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="248dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioButton2"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="248dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/holo_green_light"
+        android:textColor="@android:color/primary_text_light"
+        android:text="@string/button1"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="319dp" />
+
+
+</LinearLayout>
