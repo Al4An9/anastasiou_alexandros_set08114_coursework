@@ -15,7 +15,7 @@
         android:dependency="notifications_new_message"
         android:key="notifications_new_message_ringtone"
         android:ringtoneType="notification"
-        android:title="pref_title_ringtone" />
+        android:title="Notification tone" />
 
     <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
     <SwitchPreference

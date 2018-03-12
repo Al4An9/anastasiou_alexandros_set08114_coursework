@@ -3,18 +3,18 @@
     <!-- These settings headers are only used on tablets. -->
 
     <header
-        android:fragment="uk.ac.napier.ultimatefitnesstool.SettingsActivity$GeneralPreferenceFragment"
-        android:icon="@drawable/ic_info_black_24dp"
+        android:fragment="uk.ac.napier.ultimatefitnesstool.Activities.SettingsActivity$GeneralPreferenceFragment"
+        android:icon="@drawable/ic_account_box_black_24dp"
         android:title="@string/pref_header_MyProfile"/>
 
     <header
-        android:fragment="uk.ac.napier.ultimatefitnesstool.SettingsActivity$NotificationPreferenceFragment"
+        android:fragment="uk.ac.napier.ultimatefitnesstool.Activities.SettingsActivity$NotificationPreferenceFragment"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/pref_header_Settings" />
 
     <header
-        android:fragment="uk.ac.napier.ultimatefitnesstool.SettingsActivity$DataSyncPreferenceFragment"
-        android:icon="@drawable/ic_sync_black_24dp"
+        android:fragment="uk.ac.napier.ultimatefitnesstool.Activities.SettingsActivity$DataSyncPreferenceFragment"
+        android:icon="@drawable/ic_help_black_24dp"
         android:title="@string/pref_header_Help" />
 
 </preference-headers>

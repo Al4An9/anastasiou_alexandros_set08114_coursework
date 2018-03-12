@@ -1,6 +1,5 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Help preferences -->
-
     <Preference
         android:key="About Us"
         android:title="@string/pref_title_about_Us"/>

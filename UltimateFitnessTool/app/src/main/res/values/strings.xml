@@ -1,19 +1,35 @@
 <resources>
-    <!--Main Activity -->
+    <!--Register Activity -->
     <string name="app_name">Ultimate Fitness Tool</string>
-    <string name="textView">Height</string>
-    <string name="textView1">Weight</string>
-    <string name="textView2">Age</string>
-    <string name="textView3">Email</string>
-    <string name="textView4">Pass</string>
+    <string name="hint_name">Name:</string>
+    <string name="hint_email">Email:</string>
+    <string name="hint_password">Password:</string>
+    <string name="hint_confirm_password">Confirm Password:</string>
+    <string name="hint_height">Height(in cm):</string>
+    <string name="hint_weight">Weight(in kg):</string>
+    <string name="hint_age">Age:</string>
     <string name="textView5">Goals</string>
-    <string name="textView6">Gender</string>
+    <string name="textView6">Gender:</string>
     <string name="radioButton">Male</string>
     <string name="radioButton2">Female</string>
-    <string name="button1">Submit</string>
+    <string name="text_member">Already a member? Login</string>#
+
+    <!--Login Activity -->
+    <string name="text_login">Login</string>
+    <string name="text_register">Register</string>
+    <string name="error_message_name">Enter Valid Name</string>
+    <string name="error_message_age">Enter Age</string>
+    <string name="error_message_password">Enter Password</string>
+    <string name="success_message">Registration Successful</string>
+    <string name="text_not_member">Not a member? Create Account</string>
+    <string name="error_email_exists">Email Already Exists</string>
+    <string name="error_password_match">Password Does Not Match</string>
+    <string name="error_valid_email_password">Wrong Email or Password</string>
+    <string name="error_message_email">Enter Valid Email</string>
+    <string name="LogIn">Login</string>
 
     <!-- Main 2 Activity-->
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_main2activity">Fitness Tool</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
@@ -45,6 +61,6 @@
 
     <!--bottom navigation menu -->
     <string name="menu_home">Home</string>
-    <string name="menu_diary">diary</string>
-    <string name="menu_settings">Home</string>
+    <string name="menu_diary">Diary</string>
+    <string name="menu_settings">Settings</string>
 </resources>
