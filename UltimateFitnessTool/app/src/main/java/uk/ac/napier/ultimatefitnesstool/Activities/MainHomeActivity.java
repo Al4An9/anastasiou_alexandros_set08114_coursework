@@ -35,6 +35,7 @@ public class MainHomeActivity extends AppCompatActivity
         String nameFromIntent = getIntent().getStringExtra("EMAIL");
         textViewName.setText("Welcome" + nameFromIntent);
 
+
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override

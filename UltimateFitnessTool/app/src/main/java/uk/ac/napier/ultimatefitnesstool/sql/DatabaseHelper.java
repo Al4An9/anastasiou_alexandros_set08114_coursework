@@ -64,10 +64,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     public boolean checkUser(String email){
-        String[] columns={
+        String[] columns = {
                 COLUMN_USER_ID
         };
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         String selection = COLUMN_USER_EMAIL + " = ?";
         String[] selectionArgs = { email };
 
@@ -82,18 +82,18 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         cursor.close();
         db.close();
 
-        if(cursorCount > 0){
+        if (cursorCount > 0){
             return true;
         }
         return false;
     }
 
     public boolean checkUser(String email, String password){
-        String[] columns={
+        String[] columns = {
                 COLUMN_USER_ID
         };
-        SQLiteDatabase db = this.getWritableDatabase();
-        String selection = COLUMN_USER_EMAIL + " = ?" + " AND " + COLUMN_USER_PASSWORD + " =?";
+        SQLiteDatabase db = this.getReadableDatabase();
+        String selection = COLUMN_USER_EMAIL + " = ?" + " AND " + COLUMN_USER_PASSWORD + " = ?";
         String[] selectionArgs = { email, password };
 
         Cursor cursor = db.query(TABLE_USER,
@@ -107,9 +107,36 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         cursor.close();
         db.close();
 
-        if(cursorCount > 0){
+        if (cursorCount > 0){
             return true;
         }
         return false;
+    }
+
+    public void deleteUser(User user) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        // delete user record by id
+        db.delete(TABLE_USER, COLUMN_USER_ID + " = ?",
+                new String[]{String.valueOf(user.getId())});
+        db.close();
+    }
+
+    /**
+     * This method to update user record
+     *
+     * @param user
+     */
+    public void updateUser(User user) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_USER_NAME, user.getName());
+        values.put(COLUMN_USER_EMAIL, user.getEmail());
+        values.put(COLUMN_USER_PASSWORD, user.getPassword());
+
+        // updating row
+        db.update(TABLE_USER, values, COLUMN_USER_ID + " = ?",
+                new String[]{String.valueOf(user.getId())});
+        db.close();
     }
 }
