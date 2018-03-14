@@ -29,8 +29,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextInputEditText textInputEditTextEmail;
     private TextInputEditText textInputEditTextPassword;
 
-    private AppCompatButton appCombatButtonLogin;
+    private AppCompatButton appCompatButtonLogin;
     private AppCompatTextView textViewLinkRegister;
+    private AppCompatTextView textViewLinkForgotPassword;
 
     private InputValidation inputValidation;
     private DatabaseHelper databaseHelper;
@@ -39,7 +40,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+        setTitle(getResources().getText(R.string.LogIn));
+
 
         initViews();
         initListeners();
@@ -54,14 +56,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         textInputEditTextEmail = (TextInputEditText) findViewById(R.id.textInputEditTextEmail);
         textInputEditTextPassword = (TextInputEditText) findViewById(R.id.textInputEditTextPassword);
 
-        appCombatButtonLogin = (AppCompatButton) findViewById(R.id.appCombatButtonLogin);
+        appCompatButtonLogin = (AppCompatButton) findViewById(R.id.appCompatButtonLogin);
 
         textViewLinkRegister = (AppCompatTextView) findViewById(R.id.textViewLinkRegister);
+        textViewLinkForgotPassword = (AppCompatTextView)findViewById(R.id.textViewLinkForgotPassword);
+
+        textInputEditTextEmail.setText("alex@email.com");
+        textInputEditTextPassword.setText("alex");
     }
 
     private void initListeners(){
-        appCombatButtonLogin.setOnClickListener(this);
+        appCompatButtonLogin.setOnClickListener(this);
         textViewLinkRegister.setOnClickListener(this);
+        textViewLinkForgotPassword.setOnClickListener(this);
     }
 
     private void initObjects(){
@@ -72,12 +79,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v){
         switch (v.getId()){
-            case R.id.appCombatButtonLogin:
-            verifyFromSQLite();
-            break;
+            case R.id.appCompatButtonLogin:
+                verifyFromSQLite();
+                break;
             case R.id.textViewLinkRegister:
                 Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intentRegister);
+                break;
+            case R.id.textViewLinkForgotPassword:
+                Intent intentForgotpass = new Intent(getApplicationContext(), ForgotPassword.class);
+                startActivity(intentForgotpass);
+                break;
         }
     }
 
@@ -91,11 +103,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_email))) {
             return;
         }
-
         if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim()
                 , textInputEditTextPassword.getText().toString().trim())) {
             Intent accountsIntent = new Intent(activity, MainHomeActivity.class);
-            accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
+            accountsIntent.putExtra("EMAIL", databaseHelper.getUserName(textInputEditTextEmail.getText().toString().trim()));
             emptyInputEditText();
             startActivity(accountsIntent);
         } else {

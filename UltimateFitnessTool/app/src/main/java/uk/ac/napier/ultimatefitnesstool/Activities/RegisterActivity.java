@@ -52,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        getSupportActionBar().hide();
+        getSupportActionBar().setTitle("Register");
 
         initViews();
         initListeners();
@@ -78,7 +78,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         textInputEditTextWeight = (TextInputEditText) findViewById(R.id.textInputEditTextWeight);
         textInputEditTextAge = (TextInputEditText)findViewById(R.id.textInputEditTextAge);
 
-        appCompatButtonRegister = (AppCompatButton) findViewById(R.id.appCombatButtonRegister);
+        appCompatButtonRegister = (AppCompatButton) findViewById(R.id.appCompatButtonRegister);
         textViewLoginLink = (AppCompatTextView) findViewById(R.id.textViewLoginLink);
     }
 
@@ -96,7 +96,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v){
         switch(v.getId()){
-            case R.id.appCombatButtonRegister:
+            case R.id.appCompatButtonRegister:
                 postDataToSQLite();
                 break;
             case R.id.textViewLoginLink:
@@ -111,6 +111,15 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
         if (!inputValidation.isInputEditTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))){
+            return;
+        }
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextHeight, textInputLayoutHeight, getString(R.string.error_message_height))) {
+            return;
+        }
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextWeight, textInputLayoutWeight, getString(R.string.error_message_weight))) {
+            return;
+        }
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextAge, textInputLayoutAge, getString(R.string.error_message_age))) {
             return;
         }
         if (!inputValidation.isInputEditTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))){

@@ -6,7 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
     </style>
     <!--settings iconMainHomeActivityvity-->
     <style name="MyActionButtonOverflow" parent="android:Widget.Holo.Light.ActionButton.Overflow">

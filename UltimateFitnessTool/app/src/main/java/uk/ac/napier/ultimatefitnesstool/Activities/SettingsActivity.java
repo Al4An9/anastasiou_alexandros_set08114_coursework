@@ -18,6 +18,9 @@ import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.widget.EditText;
+
+import uk.ac.napier.ultimatefitnesstool.sql.DatabaseHelper;
 
 import java.util.List;
 
@@ -173,23 +176,24 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     }
 
     /**
-     * This fragment shows general preferences only. It is used when the
+     * This fragment shows my account preferences only. It is used when the
      * activity is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class GeneralPreferenceFragment extends PreferenceFragment {
         @Override
+       // EditText txtNm;
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_my_account);
             setHasOptionsMenu(true);
-
+            System.out.println("hello");
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
-
-            //bindPreferenceSummaryToValue(findPreference("example_text"));
+            //txtNm = (EditText)findViewById(R.id.txtNm);
+            bindPreferenceSummaryToValue(findPreference("txtNm"));
             //bindPreferenceSummaryToValue(findPreference("example_list"));
         }
 

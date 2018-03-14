@@ -4,17 +4,14 @@
     tools:showIn="bottom_navigation_view">
     <item
         android:id="@+id/menu_home"
-        android:enabled="true"
         android:title="@string/menu_home"
         android:icon="@drawable/ic_home_black_24dp" />
     <item
         android:id="@+id/menu_diary"
-        android:enabled="true"
         android:title="@string/menu_diary"
         android:icon="@drawable/ic_book_black_24dp" />
     <item
         android:id="@+id/menu_settings"
-        android:enabled="true"
         android:title="@string/menu_settings"
         android:icon="@drawable/ic_settings_black_24dp" />
 </menu>

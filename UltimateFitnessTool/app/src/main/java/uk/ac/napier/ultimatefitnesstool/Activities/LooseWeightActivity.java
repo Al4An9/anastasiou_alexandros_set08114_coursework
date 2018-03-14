@@ -1,5 +1,6 @@
 package uk.ac.napier.ultimatefitnesstool.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,28 +10,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
-import android.widget.TextView;
 
+import uk.ac.napier.ultimatefitnesstool.Activities.BmiActivity;
+import uk.ac.napier.ultimatefitnesstool.Activities.MainHomeActivity;
+import uk.ac.napier.ultimatefitnesstool.Activities.SettingsActivity;
 import uk.ac.napier.ultimatefitnesstool.R;
 
-public class MainHomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
-
-    private TextView textViewName;
-
+public class LooseWeightActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     @Override
-    protected void onCreate (Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_goals);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-        textViewName = (TextView)findViewById(R.id.text1);
-        String nameFromIntent = getIntent().getStringExtra("EMAIL");
-        textViewName.setText("Welcome " + nameFromIntent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -39,9 +32,6 @@ public class MainHomeActivity extends AppCompatActivity
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        //TextView headerNameTextView = navigationView.findViewById(R.id.textViewUsername);
-        //headerNameTextView.setText("HellO");
     }
     @Override
     public void onBackPressed() {
@@ -52,21 +42,20 @@ public class MainHomeActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.nav_drawer, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        //noinspection SimplifiableIfStatement
+
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(MainHomeActivity.this, SettingsActivity.class);
+            Intent intent = new Intent(uk.ac.napier.ultimatefitnesstool.Activities.LooseWeightActivity.this, SettingsActivity.class);
             startActivity(intent);
             return true;
         }
@@ -79,19 +68,19 @@ public class MainHomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            finish();
+            Intent intent = new Intent (uk.ac.napier.ultimatefitnesstool.Activities.LooseWeightActivity.this, MainHomeActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_diary) {
 
         } else if (id == R.id.nav_bmi) {
-            Intent intent = new Intent(MainHomeActivity.this, BmiActivity.class);
+            Intent intent = new Intent(uk.ac.napier.ultimatefitnesstool.Activities.LooseWeightActivity.this, BmiActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_goals) {
-            Intent intent = new Intent(MainHomeActivity.this, GoalsActivity.class);
-            startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+            finish();
         } else if (id == R.id.nav_settings) {
-            Intent intent = new Intent(MainHomeActivity.this, SettingsActivity.class);
+            Intent intent = new Intent(uk.ac.napier.ultimatefitnesstool.Activities.LooseWeightActivity.this, SettingsActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_share) {
@@ -103,12 +92,4 @@ public class MainHomeActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    /*private void deleteClicked(){
-        databaseHelper.deleteUser(user);
-        Intent loginIntent = new Intent(MainHomeActivity.this, LoginActivity.class);
-        startActivity(loginIntent);
-        //Snackbar to show success message that record saved successfully
-        Snackbar.make(MainHomeCoordinator, getString(R.string.success_message), Snackbar.LENGTH_LONG).show();
-
-    }*/
 }

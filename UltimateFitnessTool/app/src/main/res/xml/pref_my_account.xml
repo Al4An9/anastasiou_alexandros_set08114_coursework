@@ -10,7 +10,8 @@
             android:maxLines="1"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:title="@string/pref_title_name" />
+            android:title="@string/pref_title_name"
+            android:id="@+id/txtNm"/>
 
         <EditTextPreference
             android:hint="someone@email.com"
@@ -27,6 +28,8 @@
             android:singleLine="true"
             android:title="@string/pref_title_height"/>
 
+        <Preference
+            android:title="@string/pref_title_delete_account"/>
     </PreferenceCategory>
 
     <PreferenceCategory

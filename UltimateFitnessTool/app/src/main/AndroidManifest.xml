@@ -18,18 +18,38 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activities.RegisterActivity" />
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:label="Register"/>
+
+        <activity
+            android:name=".Activities.ForgotPassword"
+            android:label="ForgotPassword"/>
+
+        <activity
+            android:name=".Activities.ConfirmPassword"
+            android:label="ConfirmPassword"/>
+
         <activity
             android:name=".Activities.MainHomeActivity"
             android:label="@string/title_main2activity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
             android:name=".Activities.SettingsActivity"
-            android:label="@string/title_activity_settings" />
+            android:label="@string/title_activity_settings"/>
 
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".Activities.MainHomeActivity" />
+        <activity
+            android:name=".Activities.BmiActivity"
+            android:label="Bmi Calculator"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".Activities.GoalsActivity"
+            android:label="Goals"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
     </application>
 
 </manifest>

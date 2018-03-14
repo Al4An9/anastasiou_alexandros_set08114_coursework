@@ -14,13 +14,13 @@ public class User {
     private String height;
     private String age;
 
-
-    public int getId() {
-        return id;
+    public User (String email)
+    {
+        this.email = email;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public User() {
+
     }
 
     public String getEmail() {
