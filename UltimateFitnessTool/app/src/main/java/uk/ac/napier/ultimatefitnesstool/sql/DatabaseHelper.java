@@ -197,6 +197,5 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         //User user = new User(cursor.getString(0));
         return cursor;
     }
-
 }
 

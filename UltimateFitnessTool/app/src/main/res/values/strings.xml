@@ -59,6 +59,8 @@
     <string name="obese_class_iii">Very severely obese</string>
     <string name="success_bmi">Good Luck</string>
 
+    <!-- Goals activity-->
+    <string name="ReadOnlyTips">tips</string>
 
     <!-- Strings related settings-Activity -->
     <string name="title_activity_settings">Settings</string>
@@ -70,16 +72,12 @@
     <string name="pref_title_email">Email</string>
     <string name="pref_title_height">Height</string>
     <string name="pref_title_delete_account">Delete account</string>
-
     <string name="pref_title_s_weight">Starting Weight</string>
     <string name="pref_title_c_weight">Current Weight</string>
     <string name="pref_title_g_weight">Goal Weight</string>
-
     <!--Strings related settings Settings-preferences -->
-    <string name="pref_header_Settings">Settings</string>
     <string name="pref_title_Notifications">Notifications</string>
     <string name="pref_title_Reminder">Drink Water Reminder</string>
-
     <!-- Strings related settings Help-preferences -->
     <string name="pref_header_Help">Help</string>
     <string name="pref_title_about_Us">About Us</string>

@@ -113,12 +113,12 @@ public class BmiActivity extends AppCompatActivity implements NavigationView.OnN
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(BmiActivity.this, SettingsActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(this, SettingsActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -126,22 +126,22 @@ public class BmiActivity extends AppCompatActivity implements NavigationView.OnN
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            Intent intent = new Intent (BmiActivity.this, MainHomeActivity.class);
-            startActivity(intent);
+            finish();
+            startActivity(new Intent(this, SettingsActivity.class));
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_diary) {
 
         } else if (id == R.id.nav_bmi) {
-
-        } else if (id == R.id.nav_goals) {
-            Intent intent = new Intent(BmiActivity.this, GoalsActivity.class);
-            finish();
+            Intent intent= new Intent(this, BmiActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(intent);
+        } else if (id == R.id.nav_goals) {
+            finish();
+            startActivity(new Intent(this, GoalsActivity.class));
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_settings) {
-            Intent intent = new Intent(BmiActivity.this, SettingsActivity.class);
             finish();
-            startActivity(intent);
+            startActivity(new Intent(this, SettingsActivity.class));
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_share) {
 
@@ -176,6 +176,7 @@ public class BmiActivity extends AppCompatActivity implements NavigationView.OnN
         bmiLabel = bmi + "\n\n" + bmiLabel;
         textViewResult.setText(bmiLabel);
     }
+
     public boolean isInputEditTextFilled(TextInputEditText textInputEditText, TextInputLayout textInputLayout, String message){
         String value = textInputEditText.getText().toString().trim();
         if(value.isEmpty()){

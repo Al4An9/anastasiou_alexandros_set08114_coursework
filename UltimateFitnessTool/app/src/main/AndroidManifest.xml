@@ -12,6 +12,9 @@
 
         <activity
             android:name=".Activities.LoginActivity">
+        </activity>
+
+        <activity android:name=".Activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -63,7 +66,7 @@
         </activity>
 
         <activity
-            android:name=".Activities.LooseWeightActivity"
+            android:name=".Activities.LooseWeight.LooseWeightActivity"
             android:label="Loose Weight"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -72,7 +75,7 @@
         </activity>
 
         <activity
-            android:name=".Activities.MaintainWeightActivity"
+            android:name=".Activities.MaintainWeight.MaintainWeightActivity"
             android:label="Maintain Weight"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -81,12 +84,62 @@
         </activity>
 
         <activity
-            android:name=".Activities.GainWeightActivity"
+            android:name=".Activities.GainWeight.GainWeightActivity"
             android:label="Gain Weight"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="uk.ac.napier.ultimatefitnesstool.Activities.GoalsActivity" />
         </activity>
+
+        <activity android:name=".Activities.LooseWeight.LooseWTipsandTricksActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.LooseWeight.LooseWSupplementsActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.LooseWeight.LooseWMealsActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.GainWeight.GainWWorkoutActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.GainWeight.GainWTipsandTricksActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.GainWeight.GainWSupplementsActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.GainWeight.GainWMealsActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.LooseWeight.LooseWWorkoutActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.MaintainWeight.MaintainWTipsandTricksActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.MaintainWeight.MaintainWSupplementsActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.MaintainWeight.MaintainWMealsActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activities.MaintainWeight.MaintainWWorkoutActivity"
+            android:label="Tips and Tricks"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
     </application>
 </manifest>

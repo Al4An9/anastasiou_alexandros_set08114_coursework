@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.os.Handler;
 
 import uk.ac.napier.ultimatefitnesstool.R;
 import uk.ac.napier.ultimatefitnesstool.helper.InputValidation;
@@ -41,7 +42,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setTitle(getResources().getText(R.string.LogIn));
-
 
         initViews();
         initListeners();

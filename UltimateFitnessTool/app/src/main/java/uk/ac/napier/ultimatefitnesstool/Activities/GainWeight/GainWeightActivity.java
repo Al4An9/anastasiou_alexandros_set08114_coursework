@@ -1,4 +1,4 @@
-package uk.ac.napier.ultimatefitnesstool.Activities;
+package uk.ac.napier.ultimatefitnesstool.Activities.GainWeight;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,24 +13,26 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import uk.ac.napier.ultimatefitnesstool.Activities.BmiActivity;
+import uk.ac.napier.ultimatefitnesstool.Activities.LooseWeight.LooseWMealsActivity;
+import uk.ac.napier.ultimatefitnesstool.Activities.LooseWeight.LooseWSupplementsActivity;
+import uk.ac.napier.ultimatefitnesstool.Activities.LooseWeight.LooseWTipsandTricksActivity;
+import uk.ac.napier.ultimatefitnesstool.Activities.LooseWeight.LooseWWorkoutActivity;
 import uk.ac.napier.ultimatefitnesstool.Activities.GainWeight.GainWeightActivity;
-import uk.ac.napier.ultimatefitnesstool.Activities.LooseWeight.LooseWeightActivity;
-import uk.ac.napier.ultimatefitnesstool.Activities.MaintainWeight.MaintainWeightActivity;
+import uk.ac.napier.ultimatefitnesstool.Activities.MainHomeActivity;
+import uk.ac.napier.ultimatefitnesstool.Activities.SettingsActivity;
 import uk.ac.napier.ultimatefitnesstool.R;
 
-/**
- * Created by alex4 on 14/03/2018.
- */
-
-public class GoalsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class GainWeightActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_goals);
+        setContentView(R.layout.activity_goals_navigation);
 
-        AppCompatButton appCompatButton = (AppCompatButton)findViewById(R.id.appCompatButtonLooseWeight);
-        AppCompatButton appCompatButton1 = (AppCompatButton)findViewById(R.id.appCompatButtonGainWeight);
-        AppCompatButton appCompatButton2 = (AppCompatButton)findViewById(R.id.appCompatButtonMaintainWeight);
+        AppCompatButton appCompatButton = (AppCompatButton)findViewById(R.id.appCompatButtonTipsandTricks);
+        AppCompatButton appCompatButton1 = (AppCompatButton)findViewById(R.id.appCompatButtonMealsSuggestions);
+        AppCompatButton appCompatButton2 = (AppCompatButton)findViewById(R.id.appCompatButtonWorkoutSuggestions);
+        AppCompatButton appCompatButton3 = (AppCompatButton)findViewById(R.id.appCompatButtonSupplementSuggestions) ;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -45,26 +47,29 @@ public class GoalsActivity extends AppCompatActivity implements NavigationView.O
 
         appCompatButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                AppCompatButton appCompatButton = (AppCompatButton) findViewById(R.id.appCompatButtonLooseWeight);
-                Intent intent = new Intent(GoalsActivity.this, LooseWeightActivity.class);
-                intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
+                AppCompatButton appCompatButton = (AppCompatButton) findViewById(R.id.appCompatButtonTipsandTricks);
+                startActivity(new Intent(GainWeightActivity.this, GainWTipsandTricksActivity.class));
             }
         });
 
         appCompatButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                AppCompatButton appCompatButton1 = (AppCompatButton) findViewById(R.id.appCompatButtonGainWeight);
-                Intent intent = new Intent(GoalsActivity.this, GainWeightActivity.class);
-                startActivity(intent);
+                AppCompatButton appCompatButton1 = (AppCompatButton) findViewById(R.id.appCompatButtonMealsSuggestions);
+                startActivity(new Intent(GainWeightActivity.this, GainWMealsActivity.class));
             }
         });
 
         appCompatButton2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                AppCompatButton appCompatButton2 = (AppCompatButton) findViewById(R.id.appCompatButtonMaintainWeight);
-                Intent intent = new Intent(GoalsActivity.this, MaintainWeightActivity.class);
-                startActivity(intent);
+                AppCompatButton appCompatButton2 = (AppCompatButton) findViewById(R.id.appCompatButtonWorkoutSuggestions);
+                startActivity(new Intent(GainWeightActivity.this, GainWWorkoutActivity.class));
+            }
+        });
+
+        appCompatButton3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                AppCompatButton appCompatButton2 = (AppCompatButton) findViewById(R.id.appCompatButtonSupplementSuggestions);
+                startActivity(new Intent(GainWeightActivity.this, GainWSupplementsActivity.class));
             }
         });
     }
@@ -102,22 +107,20 @@ public class GoalsActivity extends AppCompatActivity implements NavigationView.O
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            finish();
-            startActivity(new Intent(this, MainHomeActivity.class));
+            Intent intent = new Intent (GainWeightActivity.this, MainHomeActivity.class);
+            startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_diary) {
 
         } else if (id == R.id.nav_bmi) {
-            finish();
-            startActivity(new Intent(this, BmiActivity.class));
+            Intent intent = new Intent(GainWeightActivity.this, BmiActivity.class);
+            startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_goals) {
-            Intent intent= new Intent(this, GoalsActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-            startActivity(intent);
-        } else if (id == R.id.nav_settings) {
             finish();
-            startActivity(new Intent(this, SettingsActivity.class));
+        } else if (id == R.id.nav_settings) {
+            Intent intent = new Intent(GainWeightActivity.this, SettingsActivity.class);
+            startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_share) {
 
