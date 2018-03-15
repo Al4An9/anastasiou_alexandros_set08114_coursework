@@ -1,0 +1,93 @@
+<resources>
+    <!--Register Activity -->
+    <string name="app_name">Ultimate Fitness Tool</string>
+    <string name="hint_name">Name:</string>
+    <string name="hint_email">Email:</string>
+    <string name="hint_password">Password:</string>
+    <string name="hint_confirm_password">Confirm Password:</string>
+    <string name="hint_height">Height(in cm):</string>
+    <string name="hint_weight">Weight(in kg):</string>
+    <string name="hint_age">Age:</string>
+    <string name="text_member">Already a member? Login</string>
+    <string name="error_message_height">Enter Height</string>
+    <string name="error_message_weight">Enter Weight</string>
+    <string name="error_email_exists">Email Already Exists</string>
+    <string name="error_password_match">Password Does Not Match</string>
+    <string name="text_register">Register</string>
+    <string name="error_message_name">Enter Valid Name</string>
+    <string name="error_message_age">Enter Age</string>
+    <string name="success_message">Registration Successful</string>
+
+    <!--Login Activity & Forgot Password error messages -->
+    <string name="text_login">Login</string>
+    <string name="error_message_password">Enter Password</string>
+    <string name="text_not_member">Not a member? Create Account</string>
+    <string name="error_valid_email_password">Wrong Email or Password</string>
+    <string name="error_message_email">Enter Valid Email</string>
+    <string name="LogIn">Login</string>
+    <string name="confirm_password">Confirm</string>
+    <string name="reset_password">Reset</string>
+    <string name="forgot_password">Forgot Password?</string>
+
+    <!-- Main Home Activity-->
+    <string name="title_main2activity">Fitness Tool</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="delete">Delete</string>
+    <string name="success_delete">Your account was successfully deleted</string>
+
+    <!--Goals Activity -->
+    <string name="gain_weight">Gain Weight</string>
+    <string name="loose_weight">Loose weight</string>
+    <string name="maintain_weight">Maintain weight</string>
+    <string name="tips_tricks">Tips and Tricks</string>
+    <string name="Meals">Suggestions for meals</string>
+    <string name="Workout">Suggestions for workouts</string>
+    <string name="Supplements">Suggestions for supplements</string>
+
+
+    <!-- BMi activity-->
+    <string name="text_calculate_Bmi">Calculate</string>
+    <string name="very_severely_underweight">Very severely_underweight</string>
+    <string name="severely_underweight">Severely underweight</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal">Normal(healthy weight)</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese_class_i">Moderately obese</string>
+    <string name="obese_class_ii">Severely obese</string>
+    <string name="obese_class_iii">Very severely obese</string>
+    <string name="success_bmi">Good Luck</string>
+
+
+    <!-- Strings related settings-Activity -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_ringtone_silent">silent</string>
+
+    <!-- Strings related settings MyProfile-preferences -->
+    <string name="pref_header_MyProfile">My Profile</string>
+    <string name="pref_title_name">Name</string>
+    <string name="pref_title_email">Email</string>
+    <string name="pref_title_height">Height</string>
+    <string name="pref_title_delete_account">Delete account</string>
+
+    <string name="pref_title_s_weight">Starting Weight</string>
+    <string name="pref_title_c_weight">Current Weight</string>
+    <string name="pref_title_g_weight">Goal Weight</string>
+
+    <!--Strings related settings Settings-preferences -->
+    <string name="pref_header_Settings">Settings</string>
+    <string name="pref_title_Notifications">Notifications</string>
+    <string name="pref_title_Reminder">Drink Water Reminder</string>
+
+    <!-- Strings related settings Help-preferences -->
+    <string name="pref_header_Help">Help</string>
+    <string name="pref_title_about_Us">About Us</string>
+    <string name="pref_title_feedback">Feedback</string>
+    <string name="pref_title_share">Share Ultimate Fitness Tool</string>
+
+    <!--bottom navigation menu -->
+    <string name="menu_home">Home</string>
+    <string name="menu_diary">Diary</string>
+    <string name="menu_settings">Settings</string>
+</resources>

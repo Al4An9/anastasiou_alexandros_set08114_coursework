@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.ac.napier.ultimatefitnesstool">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_foreground2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".Activities.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:label="Register"/>
+
+        <activity
+            android:name=".Activities.ForgotPassword"
+            android:label="ForgotPassword"/>
+
+        <activity
+            android:name=".Activities.ConfirmPassword"
+            android:label="ConfirmPassword"/>
+
+        <activity
+            android:name=".Activities.MainHomeActivity"
+            android:label="@string/title_main2activity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:label="@string/title_activity_settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.MainHomeActivity" />
+        </activity>
+
+        <activity
+            android:name=".Activities.BmiActivity"
+            android:label="Bmi Calculator"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.MainHomeActivity" />
+        </activity>
+
+        <activity
+            android:name=".Activities.GoalsActivity"
+            android:label="Goals"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.MainHomeActivity" />
+        </activity>
+
+        <activity
+            android:name=".Activities.LooseWeightActivity"
+            android:label="Loose Weight"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.GoalsActivity" />
+        </activity>
+
+        <activity
+            android:name=".Activities.MaintainWeightActivity"
+            android:label="Maintain Weight"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.GoalsActivity" />
+        </activity>
+
+        <activity
+            android:name=".Activities.GainWeightActivity"
+            android:label="Gain Weight"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.GoalsActivity" />
+        </activity>
+    </application>
+</manifest>
