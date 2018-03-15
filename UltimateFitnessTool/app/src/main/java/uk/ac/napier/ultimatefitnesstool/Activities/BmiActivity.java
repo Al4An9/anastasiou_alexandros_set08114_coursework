@@ -132,13 +132,15 @@ public class BmiActivity extends AppCompatActivity implements NavigationView.OnN
         } else if (id == R.id.nav_diary) {
 
         } else if (id == R.id.nav_bmi) {
-            finish();
+
         } else if (id == R.id.nav_goals) {
             Intent intent = new Intent(BmiActivity.this, GoalsActivity.class);
+            finish();
             startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_settings) {
             Intent intent = new Intent(BmiActivity.this, SettingsActivity.class);
+            finish();
             startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_share) {
@@ -150,8 +152,6 @@ public class BmiActivity extends AppCompatActivity implements NavigationView.OnN
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 
     private void displayBMI(double bmi) {
         String bmiLabel = "";

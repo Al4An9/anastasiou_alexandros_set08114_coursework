@@ -27,6 +27,10 @@ public class GoalsActivity extends AppCompatActivity implements NavigationView.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goals);
 
+        AppCompatButton appCompatButton = (AppCompatButton)findViewById(R.id.appCompatButtonLooseWeight);
+        AppCompatButton appCompatButton1 = (AppCompatButton)findViewById(R.id.appCompatButtonGainWeight);
+        AppCompatButton appCompatButton2 = (AppCompatButton)findViewById(R.id.appCompatButtonMaintainWeight);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -37,6 +41,33 @@ public class GoalsActivity extends AppCompatActivity implements NavigationView.O
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        appCompatButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                AppCompatButton appCompatButton = (AppCompatButton) findViewById(R.id.appCompatButtonLooseWeight);
+                Intent intent = new Intent(GoalsActivity.this, LooseWeightActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        appCompatButton1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                AppCompatButton appCompatButton1 = (AppCompatButton) findViewById(R.id.appCompatButtonGainWeight);
+                Intent intent = new Intent(GoalsActivity.this, GainWeightActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        appCompatButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                AppCompatButton appCompatButton2 = (AppCompatButton) findViewById(R.id.appCompatButtonMaintainWeight);
+                Intent intent = new Intent(GoalsActivity.this, MaintainWeightActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
     @Override
     public void onBackPressed() {
@@ -74,18 +105,21 @@ public class GoalsActivity extends AppCompatActivity implements NavigationView.O
 
         if (id == R.id.nav_home) {
             Intent intent = new Intent (GoalsActivity.this, MainHomeActivity.class);
+            finish();
             startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_diary) {
 
         } else if (id == R.id.nav_bmi) {
             Intent intent = new Intent(GoalsActivity.this, BmiActivity.class);
+            finish();
             startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_goals) {
-            finish();
+
         } else if (id == R.id.nav_settings) {
             Intent intent = new Intent(GoalsActivity.this, SettingsActivity.class);
+            finish();
             startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_share) {

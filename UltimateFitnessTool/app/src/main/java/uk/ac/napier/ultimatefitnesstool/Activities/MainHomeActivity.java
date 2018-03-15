@@ -13,11 +13,13 @@ import android.content.Intent;
 import android.widget.TextView;
 
 import uk.ac.napier.ultimatefitnesstool.R;
+import uk.ac.napier.ultimatefitnesstool.sql.DatabaseHelper;
 
 public class MainHomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
     private TextView textViewName;
+    DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -26,7 +28,6 @@ public class MainHomeActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         textViewName = (TextView)findViewById(R.id.text1);
         String nameFromIntent = getIntent().getStringExtra("EMAIL");
@@ -66,8 +67,7 @@ public class MainHomeActivity extends AppCompatActivity
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(MainHomeActivity.this, SettingsActivity.class);
-            startActivity(intent);
+            startActivity( new Intent(MainHomeActivity.this, SettingsActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -79,19 +79,22 @@ public class MainHomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            finish();
+
         } else if (id == R.id.nav_diary) {
 
         } else if (id == R.id.nav_bmi) {
             Intent intent = new Intent(MainHomeActivity.this, BmiActivity.class);
+            finish();
             startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_goals) {
             Intent intent = new Intent(MainHomeActivity.this, GoalsActivity.class);
+            finish();
             startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_settings) {
             Intent intent = new Intent(MainHomeActivity.this, SettingsActivity.class);
+            finish();
             startActivity(intent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         } else if (id == R.id.nav_share) {
@@ -104,6 +107,7 @@ public class MainHomeActivity extends AppCompatActivity
         return true;
     }
     /*private void deleteClicked(){
+        DatabaseHelper databaseHelper = new
         databaseHelper.deleteUser(user);
         Intent loginIntent = new Intent(MainHomeActivity.this, LoginActivity.class);
         startActivity(loginIntent);

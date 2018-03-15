@@ -16,31 +16,34 @@
         android:id="@+id/linearLayoutCompatBmi">
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appCompatButtonLooseWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/shape"
             android:text="@string/loose_weight"
+            android:textSize="22sp"
             android:padding="20dp"
-            android:textSize="30sp"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="30dp" />
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appCompatButtonGainWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/shape"
             android:text="@string/gain_weight"
             android:padding="20dp"
-            android:textSize="30sp"
-            android:layout_marginTop="20dp" />
+            android:textSize="22sp"
+            android:layout_marginTop="30dp" />
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appCompatButtonMaintainWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/shape"
             android:text="@string/maintain_weight"
             android:padding="20dp"
-            android:textSize="30sp"
-            android:layout_marginTop="20dp" />
+            android:textSize="22sp"
+            android:layout_marginTop="30dp" />
 
     </android.support.v7.widget.LinearLayoutCompat>
 </RelativeLayout>

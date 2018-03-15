@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".Activities.LoginActivity">
             <intent-filter>
@@ -37,19 +38,55 @@
 
         <activity
             android:name=".Activities.SettingsActivity"
-            android:label="@string/title_activity_settings"/>
+            android:label="@string/title_activity_settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.MainHomeActivity" />
+        </activity>
 
         <activity
             android:name=".Activities.BmiActivity"
             android:label="Bmi Calculator"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.MainHomeActivity" />
+        </activity>
 
         <activity
             android:name=".Activities.GoalsActivity"
             android:label="Goals"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.MainHomeActivity" />
+        </activity>
 
+        <activity
+            android:name=".Activities.LooseWeightActivity"
+            android:label="Loose Weight"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.GoalsActivity" />
+        </activity>
 
+        <activity
+            android:name=".Activities.MaintainWeightActivity"
+            android:label="Maintain Weight"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.GoalsActivity" />
+        </activity>
+
+        <activity
+            android:name=".Activities.GainWeightActivity"
+            android:label="Gain Weight"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.ac.napier.ultimatefitnesstool.Activities.GoalsActivity" />
+        </activity>
     </application>
-
 </manifest>
